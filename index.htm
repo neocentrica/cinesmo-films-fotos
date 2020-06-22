@@ -9,10 +9,49 @@
 </head>
 
 <body>
-<header><a href="https://pistachocaruso.github.io/cinesmo-films/" id="home">principal</a>fotografía<a href="https://pistachocaruso.github.io/cinesmo-films-pelis/" id="next">pelis</a>
+<header><a href="index.htm" id="home">principal</a>fotografía<a href="pelis.htm" id="next">pelis</a>
 </header>
 
-<main><p>bogotá.<br>2019</p><img src="fotos/foto1.jpg" id="disti" alt="distimia agorafobica en bogaloop"></main>
+<nav>
+<a class="pre" onclick="arr(-1)">&#10094;</a>
+<a class="pos" onclick="arr(1)">&#10095;</a>
+</nav>
+
+<main class="slidehow-container">
+<div class="photos"><p>bogotá.<br>2019</p><img src="fotos/foto1.jpg" id="disti" alt="distimia agorafobica en bogaloop"></div>
+<div class="photos"><p>urrao.<br>2018</p><img src="fotos/foto2.jpg" id="urrao" alt="urrao, camino al paramo"></div>
+<div class="photos"><p>paloquemao.<br>2018</p><img src="fotos/foto3.jpg" id="palo" alt="plaza de mercado paloquemao"></div>
+<div class="photos"><p>jardín.<br>2018</p><img src="fotos/foto4.jpg" id="euca" alt="árboles de eucalipto"></div>
+<div class="photos"><p>bogotá.<br>2019</p><img src="fotos/foto5.jpg" id="rbc" alt="karin.b"></div>
+</main>
+    
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function arr(n) {
+  showSlides(slideIndex += n);
+}
+
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("photos");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+
+</script>
 
 
 </body>
