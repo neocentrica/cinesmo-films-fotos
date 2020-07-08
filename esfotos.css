@@ -14,18 +14,20 @@ header {grid-area: header; font-family: Arial, Helvetica, sans-serif; font-size:
 
 main {grid-area: main; font-family: Arial, Helvetica, sans-serif; font-size: 40px; }
 
-#disti {width:  250px;}
-#urrao {width: 250px;}
-#palo {width: 250px;}
-#euca {width: 250px;}
-#rbc {width: 250px;}
-
+.imgv {height: 100%;}
+.imgh {height: 100%;}
 
 nav {grid-area: nav; text-align: center;
   cursor: default;
   color: black;
   font-size: 20px;
 }
+
+@media screen and (max-width: 600px)
+{.imgh, .imgv
+{width: 98% ; height: auto; }
+}
+
 
 
 
